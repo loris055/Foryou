@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For my beautiful baby ❤️</title>
+    <style>
+        /* Cijela pozadina stranice je tamno ljubičasta, a slova su bijela */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #4c1d95; 
+            color: #ffffff;
+            padding: 25px 15px;
+            margin: 0;
+        }
+        /* Kartica je sada isto tamno ljubičasta s malo svjetlijim rubom */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #5b21b6;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid #7c3aed;
+        }
+        
+        /* Naslovi i tekstovi - sve u bijelim i svijetlim nijansama */
+        h1 { color: #ffffff; font-size: 28px; text-align: center; margin-bottom: 25px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        h3 { color: #ddd6fe; margin-top: 30px; font-size: 18px; border-bottom: 2px solid #7c3aed; padding-bottom: 8px; }
+        p { font-size: 15px; line-height: 1.6; color: #f5f3ff; text-align: left; }
+        .sub-text { font-size: 13px; color: #c084fc; font-style: italic; margin-top: -5px; margin-bottom: 10px; display: block; }
+        
+        /* Slike */
+        .story-img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Inputi, radio gumbi i textarea */
+        .radio-group {
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .radio-label {
+            background: #6d28d9;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 1px solid #7c3aed;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffffff;
+        }
+        .radio-label:hover {
+            background: #7c3aed;
+            border-color: #a855f7;
+        }
+        .yes-no-group {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        .yes-no-label {
+            flex: 1;
+            text-align: center;
+            background: #6d28d9;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #7c3aed;
+            cursor: pointer;
+            display: block;
+            color: #ffffff;
+        }
+        .yes-no-label:hover {
+            background: #7c3aed;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+            border: 1px solid #7c3aed;
+            border-radius: 8px;
+            padding: 10px;
+            resize: none;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 14px;
+            margin-top: 5px;
+            background-color: #3b0764;
+            color: #ffffff;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #c084fc;
+            background-color: #4a044e;
+        }
+        textarea::placeholder {
+            color: #c084fc;
+            opacity: 0.7;
+        }
+
+        /* Gumb za slanje - uočljiv i svijetao */
+        button {
+            width: 100%;
+            background-color: #a855f7;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 40px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        }
+        button:hover { background-color: #c084fc; }
+        
+        /* Citat / Istaknuti tekst */
+        .highlight-box {
+            font-style: italic; 
+            background: #4c1d95; 
+            padding: 12px; 
+            border-left: 3px solid #a855f7; 
+            margin-top: 20px;
+            color: #f5f3ff;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Ekran nakon slanja */
+        #success-screen {
+            display: none;
+            padding: 50px 10px;
+            text-align: center;
+        }
+        #success-screen h2 { color: #4ade80; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- GLAVNA FORMA -->
+        <form id="loveForm" action="https://formsubmit.co/mzdlvreg" method="POST">
+            
+            <div id="form-content">
+                
+                <h1>For My Beautiful Baby 🤗🥰❤️</h1>
+
+                <!-- DIO 1: Pitanje o dečku -->
+                <h3>What do you think of your bf?</h3>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="what_do_you_think_of_bf" value="I mean he can be better" required> I mean he can be better</label>
+                    <label class="radio-label"><input type="radio" name="what_do_you_think_of_bf" value="Love him"> Love him</label>
+                    <label class="radio-label"><input type="radio" name="what_do_you_think_of_bf" value="Aaa mehhh"> Aaa mehhh</label>
+                    <label class="radio-label"><input type="radio" name="what_do_you_think_of_bf" value="He's okay"> He's okay</label>
+                    <label class="radio-label"><input type="radio" name="what_do_you_think_of_bf" value="He sucks"> He sucks</label>
+                </div>
+                <span class="sub-text">If the answer you think is not offered above, please type your own answer below:</span>
+                <textarea name="own_answer_about_bf" placeholder="Type your own answer here..."></textarea>
+
+
+                <!-- DIO 2: Prva sekcija s tekstom i slikama -->
+                <h3>A little secret... 🤫</h3>
+                <p>Just to show you how much I'm crazy for you, see I'm stalking you too much:</p>
+                
+                <!-- SLIKA 1: Adriana22.jpg -->
+                <img src="Adriana22.jpg" alt="Beautiful memory" class="story-img">
+                
+                <p>And believe me or not, I still do watch your pictures every day like for a half of hour or even longer (without doing that thing on your pics), this picture you see is random screenshot from your story because I just can't not have you that beautiful in my gallery.</p>
+                
+                <p>And if you are interested when I'm doing that thing yk, this is the picture where I do mostly, idk I just like it so much:</p>
+                
+                <!-- SLIKA 2: Adriana33.jpg -->
+                <img src="Adriana33.jpg" alt="My favorite picture" class="story-img">
+                
+                <p>So see, you are so beautiful fr, like 100/100 clear 10 for that picture and clear smash.</p>
+
+
+                <!-- DIO 3: Tekst o svađama i komunikaciji -->
+                <h3>Let's make things better... ✨</h3>
+                <p>And every time before we start arguing please ask me second time do I think that fr or it's a mistake and pls don't be quiet cuz that won't make things good, and talk can, like please talk to me when u feel bad or I did smth by my mistake too, I hope you'll remember that cuz everytime I wanna speak normally to you even if i did smth bad I'll understand it and not feel bad genuinely I would only feel bad for u but it's not that i will die, I js wanna understand u and listen to u and try to make things better for you so you can feel better.</p>
+                <span class="sub-text">If you want to say anything, type here:</span>
+                <textarea name="message_about_communication" placeholder="Type here..."></textarea>
+
+
+                <!-- DIO 4: Kviz s pitanjima (Yes/No + poruke) -->
+                <h3>What can be problem about us or with me? 🤔</h3>
+                
+                <!-- Pitanje 1 -->
+                <p><strong>1. Do I insult myself too much?</strong></p>
+                <div class="yes-no-group">
+                    <label class="yes-no-label"><input type="radio" name="insult_myself_too_much" value="Yes" required> Yes</label>
+                    <label class="yes-no-label"><input type="radio" name="insult_myself_too_much" value="No"> No</label>
+                </div>
+                <textarea name="msg_insult_myself" placeholder="Your thoughts about this..."></textarea>
+
+                <!-- Pitanje 2 -->
+                <p><strong>2. Do I insult Yourself too much?</strong></p>
+                <div class="yes-no-group">
+                    <label class="yes-no-label"><input type="radio" name="insult_herself_too_much" value="Yes" required> Yes</label>
+                    <label class="yes-no-label"><input type="radio" name="insult_herself_too_much" value="No"> No</label>
+                </div>
+                <textarea name="msg_insult_herself" placeholder="Your thoughts about this..."></textarea>
+
+                <!-- Pitanje 3 -->
+                <p><strong>3. Did I do something bad to you?</strong></p>
+                <div class="yes-no-group">
+                    <label class="yes-no-label"><input type="radio" name="did_something_bad" value="Yes" required> Yes</label>
+                    <label class="yes-no-label"><input type="radio" name="did_something_bad" value="No"> No</label>
+                </div>
+                <span class="sub-text">If yes, what?</span>
+                <textarea name="msg_what_bad_did_i_do" placeholder="If yes, please tell me what..."></textarea>
+
+                <p class="highlight-box">
+                    Im sorry that random things happens but I told u how we can avoid that and that is if we talk before it starts and u ask me if I rlly mean smth bad and that, I js need u to talk w me when u think I think smth bad.
+                </p>
+
+
+                <!-- DIO 5: Podrška -->
+                <h3>About support... 🫂</h3>
+                <p>And I need support from someone sometimes in my life cuz I'm losing hope for somethings, not for a relationship (I did never lost hope for us) or smth. I mean in general things and that only can be you to support me. Idk where I'm safe and where I can be atp cuz in the house I don't feel support or smth so I only find support from you, and I'm glad you do support me.</p>
+                <span class="sub-text">Leave a message about this if you want:</span>
+                <textarea name="message_about_support" placeholder="Type here..."></textarea>
+
+
+                <!-- DIO 6: Budućnost -->
+                <h3>Our future... 🗺️</h3>
+                <p>Ik u feel bad without Ur friends and everything like that, but I promise I'll make ur future fun and more interesting if you will be happy w me, I mean If I will be enough to make u happy yk.</p>
+                <p>So I hope u will be happy w me in future cuz if not then idk how to make u feel better in general and have a happy days so I hope u will be happy w me in future yk.</p>
+
+
+                <!-- DIO 7: Moja osjećanja -->
+                <h3>How I feel lately... 🥺</h3>
+                <p>Do you know how bad I feel that I think everyday I'm bad and it's my bad and my fault but it's not ur fault that I feel like that.</p>
+                <p>I'm feeling everyday bad cuz I wanna get old good days we had, I mean we have it now too but I hope u r okay with me yk and when we argue every time I feel so bad after it cuz as i told u i feel scared sometimes, sometimes my heart beat asf, sometimes I cry, and sometimes I feel anxious it depends, but it everything can be better.</p>
+                <p>And last times I'm listening to sad songs cuz I feel sad lol but not w u, w u i feel lovely, js in general I feel bad abt myself.</p>
+                <span class="sub-text">Leave a message about this if you want:</span>
+                <textarea name="message_about_my_feelings" placeholder="Type here..."></textarea>
+
+
+                <!-- DIO 8: Završetak -->
+                <h3>We match each other 🧩</h3>
+                <p>Btw I believe we match each other bc u r crazy (pls I mean in a good way fr) and I'm crazy too haha so we r good for each other. And I appreciate u a lot and u mean a lot to me for real without sugarcoating like everyday and night I think of you and I just cant wait to see you or smth like that so thanks that u r putting to my shits and being still with me, I'm grateful to have u near me</p>
+                <p>I promise I'll make up for the way I behaved, in person you'll see. And I believe you will like it</p>
+                
+                <span class="sub-text">And here u can type anything you want if you have something so hear you in messages on Instagram:</span>
+                <textarea name="final_anything_you_want" placeholder="Anything else you want to tell me..."></textarea>
+
+                <p style="font-size: 18px; text-align: center; font-weight: bold; margin-top: 25px; color: #a855f7;">
+                    I love you Adyushh my beautiful baby 🤗🥰❤️
+                </p>
+
+                <button type="submit">Send Answers to Me ❤️</button>
+            </div>
+        </form>
+
+        <!-- EKRAN NAKON USPJEŠNOG SLANJA -->
+        <div id="success-screen">
+            <div style="font-size: 60px; margin-bottom: 20px;">🔮✨</div>
+            <h2>Sent successfully!</h2>
+            <p style="text-align: center; color: #f5f3ff; font-size: 16px;">
+                Thank you for reading and answering, my baby. I love you! Check your Instagram. 🥰❤️
+            </p>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT ZA SLANJE BEZ REFRESHA -->
+    <script>
+        const form = document.getElementById('loveForm');
+        const formContent = document.getElementById('form-content');
+        const successScreen = document.getElementById('success-screen');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    formContent.style.display = 'none';
+                    successScreen.style.display = 'block';
+                    window.scrollTo(0, 0);
+                } else {
+                    alert('Oops! Something went wrong. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('Internet error. Please check your connection.');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
